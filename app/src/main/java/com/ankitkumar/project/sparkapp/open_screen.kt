@@ -1,5 +1,6 @@
 package com.ankitkumar.project.sparkapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
@@ -23,6 +24,8 @@ class open_screen : AppCompatActivity() {
         }
         btn2.setOnClickListener{
             btn2.startAnimation(anim)
+            startActivity(Intent(this,Create_an_Account::class.java))
+            overridePendingTransition(R.anim.activity_enter,R.anim.activity_exit)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

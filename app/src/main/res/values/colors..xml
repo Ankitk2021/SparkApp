@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="app_back_ground">#ffffff</color>
+    <color name="text_color">@color/black</color>
+    <color name="star">#303030</color>
+    <color name="placeholder_stroke">#929292</color>
+    <color name="hint_color">#494848</color>
+</resources>

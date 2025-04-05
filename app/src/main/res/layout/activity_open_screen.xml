@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/white"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".open_screen">
@@ -37,7 +37,7 @@
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"
             android:text="Explore the app"
-            android:textColor="@color/black"
+
             android:textSize="38dp"
             android:textStyle="bold"
 
@@ -53,7 +53,7 @@
             android:fontFamily="monospace"
             android:gravity="center"
             android:text="Ignite Conversations. Spark Connections. Stay Connected!"
-            android:textColor="#9A000000"
+
             android:textSize="12dp"
             android:textStyle="normal"
 

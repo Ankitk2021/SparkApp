@@ -3,6 +3,9 @@
     <style name="Base.Theme.SparkApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowBackground">@color/app_back_ground</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="hintTextColor">@color/hint_color</item>
 
     </style>
 
