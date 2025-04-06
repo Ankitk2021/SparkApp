@@ -15,17 +15,22 @@ class open_screen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_open_screen)
 
-        val btn = findViewById<ImageButton>(R.id.imageButton)
-        val btn2 = findViewById<ImageButton>(R.id.imageButton2)
+        val create_acc_btn = findViewById<ImageButton>(R.id.imageButton_create_acc_open)
+        val sign_acc_btn = findViewById<ImageButton>(R.id.imageButton_sign_in_open)
 
         val anim = AnimationUtils.loadAnimation(this, R.anim.scale_up)
-        btn.setOnClickListener{
-            btn.startAnimation(anim)
-        }
-        btn2.setOnClickListener{
-            btn2.startAnimation(anim)
+        create_acc_btn.setOnClickListener{
             startActivity(Intent(this,Create_an_Account::class.java))
             overridePendingTransition(R.anim.activity_enter,R.anim.activity_exit)
+            create_acc_btn.startAnimation(anim)
+           // finish()
+        }
+        sign_acc_btn.setOnClickListener{
+            startActivity(Intent(this,Login::class.java))
+            overridePendingTransition(R.anim.activity_enter,R.anim.activity_exit)
+            sign_acc_btn.startAnimation(anim)
+         //   finish()
+
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
