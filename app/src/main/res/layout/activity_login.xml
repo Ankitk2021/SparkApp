@@ -5,10 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Create_an_Account">
+    tools:context=".Login">
+
 
     <ImageView
-        android:id="@+id/star_8"
+        android:id="@+id/star_8_login"
         android:layout_width="44dp"
         android:layout_height="40dp"
         android:layout_marginTop="48dp"
@@ -20,13 +21,13 @@
         app:srcCompat="@drawable/star_8" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/say_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="108dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Create account"
+        android:text="Log in"
 
         android:textSize="36dp"
         android:textStyle="bold"
@@ -36,42 +37,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edit_your_username"
+        android:id="@+id/edit_your_username_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/create_account_placeholder_background"
         android:hint="Jhon Doy"
         android:inputType="textPersonName"
+
         android:padding="12dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/edit_your_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/create_account_placeholder_background"
-        android:hint="abc123@xyz.com"
-        android:inputType="textEmailAddress"
-        android:padding="12dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_your_username" />
+        app:layout_constraintTop_toBottomOf="@+id/say_login" />
 
     <EditText
         android:id="@+id/edit_your_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/create_account_placeholder_background"
         android:drawableRight="@drawable/eye"
         android:hint="****************************"
@@ -79,43 +64,74 @@
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_your_email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_your_username_login" />
 
-
-    <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/appCompatCheckBox"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:button="@drawable/checkbox_background"
-        android:buttonTint="@color/text_color"
-        android:fontFamily="@font/roboto"
-        android:text="I accept the terms and privacy policy"
-        android:textColor="@color/text_color"
-        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        android:paddingEnd="26dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_your_password" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_your_password">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Forgot password ?"
+            android:textStyle="normal"/>
+    </LinearLayout>
 
     <ImageButton
-        android:id="@+id/create_acc_img_btn"
+        android:id="@+id/login_acc_img_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_background"
         android:contentDescription="@string/app_name"
         android:foreground="@drawable/image_button_ripple"
         android:padding="2dp"
-        android:src="@drawable/create_account_btn"
+        android:src="@drawable/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatCheckBox" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageButton
+        android:id="@+id/sign_in_with_google_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:contentDescription="@string/app_name"
+        android:foreground="@drawable/image_button_ripple"
+        android:padding="2px"
+
+        android:src="@drawable/sign_in_with_google_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_acc_img_btn" />
+
+    <ImageButton
+        android:id="@+id/sign_in_with_facebook_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_background"
+        android:contentDescription="@string/app_name"
+        android:foreground="@drawable/image_button_ripple"
+        android:padding="2px"
+        android:src="@drawable/sign_in_with_facebook_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_google_btn" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -124,15 +140,15 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/create_acc_img_btn"
-        app:layout_constraintVertical_bias="0.666">
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_facebook_btn"
+        app:layout_constraintVertical_bias="0.652">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
+            android:text="Don't have an account?"
             android:textColor="@color/star"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.265"
@@ -140,16 +156,16 @@
             app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
         <Button
-            android:id="@+id/login_go_btn"
+            android:id="@+id/sign_up_go_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-22dp"
             android:background="@android:color/transparent"
-            android:text="Log in"
+            android:drawableEnd="@drawable/go"
+            android:drawablePadding="-120dp"
+            android:text="Sign up"
             android:textColor="@color/text_color"
             android:textStyle="bold"
-            android:drawablePadding="-120dp"
-            android:drawableEnd="@drawable/go"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"
